@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project for Colin</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+            <form action="/movies/foundword" method="GET">
+                <label for='word'>Word</label><br>
+                <input type="text" id="word" name="word" placeholder="word"> <br>
+                <button type="submit"> Find Word</button>
+            </form>
+        <% if (word!==null) { %>
+        <hr />
+        <h2><%= word.word %>:</h2>
+        <p><%= word.definition %></p>
+
+        <% } %>
+    </body>
+</html>
